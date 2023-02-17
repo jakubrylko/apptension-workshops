@@ -1,15 +1,13 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
-  plugins: ['prettier'],
-  extends: ['airbnb-base', 'prettier'],
+  plugins: ['cypress'],
+  extends: ['airbnb-base', 'plugin:cypress/recommended', 'prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  rules: {
-    'prettier/prettier': 2
-  }
+  rules: {},
 };

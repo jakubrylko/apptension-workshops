@@ -1,7 +1,8 @@
 {
   "scripts": {
     "lint": "eslint .",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "debug": "CYPRESS_REMOTE_DEBUGGING_PORT=9222 npx cypress open"
   },
   "devDependencies": {
     "eslint": "^8.34.0",

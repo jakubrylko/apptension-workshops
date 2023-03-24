@@ -11,6 +11,9 @@ describe('Dates', () => {
 
     cy.visit('/organizations/93433/calendar', basicAuthData);
 
-    cy.get(DATE_INPUT);
+    cy.get(DATE_INPUT).then(($input) => {
+      const date = $input.val();
+      console.log('Date', date);
+    });
   });
 });

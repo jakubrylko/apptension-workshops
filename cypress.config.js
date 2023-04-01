@@ -6,5 +6,6 @@ module.exports = defineConfig({
     baseUrl: 'https://stage.app.teamdeck.io/',
     viewportWidth: 1920,
     viewportHeight: 1080,
+    hideXHRInCommandLog: true
   },
 });

@@ -10,6 +10,16 @@ export const assertInputDate = ({ days }) => {
   });
 };
 
+export const selectTimestamp = (timestamp) => {
+  cy.get(`[data-timestamp="${timestamp}"]`).then(($elements) => {
+    if ($elements.length === 2) {
+      cy.wrap($elements[1]).click();
+    } else {
+      cy.wrap($elements[0]).click();
+    }
+  });
+};
+
 export const ariaLabelSelector = () => {
   const date = new Date();
   const dayOfWeek = date.toLocaleDateString('en-US', { weekday: 'long' });

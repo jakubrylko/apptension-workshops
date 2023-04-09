@@ -25,7 +25,7 @@ export const newProject = {
 };
 
 export const addResource = (unitId) => ({
-  name: `JR Cypress Project ${newNumber}`,
+  name: `Employee ${newNumber}`,
   active: false,
   is_part_time: true,
   contract_start_date: '2023-04-20',
@@ -37,8 +37,8 @@ export const addBooking = (resourceId, projectId, adminId) => ({
   resource_id: resourceId,
   project_id: projectId,
   minutes: 480,
-  weekend_booking: true,
-  holidays_booking: true,
+  weekend_booking: false,
+  holidays_booking: false,
   vacations_booking: true,
   description: 'Commercial project',
   external_id: 'string',
@@ -51,7 +51,7 @@ export const addBooking = (resourceId, projectId, adminId) => ({
 export const addTimeEntry = (resourceId, projectId, adminId) => ({
   resource_id: resourceId,
   project_id: projectId,
-  minutes: 240,
+  minutes: 480,
   weekend_booking: true,
   holidays_booking: true,
   vacations_booking: true,

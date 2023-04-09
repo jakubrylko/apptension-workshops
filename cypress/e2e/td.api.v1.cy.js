@@ -189,7 +189,7 @@ describe('API Assignment', () => {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
       body: {
-        name: `JR Cypress Project ${randomNumber}`,
+        name: `Employee ${randomNumber}`,
         active: false,
         is_part_time: true,
         contract_start_date: '2023-04-20',
@@ -241,8 +241,8 @@ describe('API Assignment', () => {
           resource_id: resourceId,
           project_id: projectId,
           minutes: 480,
-          weekend_booking: true,
-          holidays_booking: true,
+          weekend_booking: false,
+          holidays_booking: false,
           vacations_booking: true,
           description: 'Commercial project',
           external_id: 'string',
@@ -265,7 +265,7 @@ describe('API Assignment', () => {
         body: {
           resource_id: resourceId,
           project_id: projectId,
-          minutes: 240,
+          minutes: 480,
           weekend_booking: true,
           holidays_booking: true,
           vacations_booking: true,

@@ -13,6 +13,8 @@
     "prettier": "2.8.4"
   },
   "dependencies": {
-    "cypress": "^12.7.0"
+    "cypress": "^12.7.0",
+    "cypress-plugin-api": "^2.11.0",
+    "lodash": "^4.17.21"
   }
 }

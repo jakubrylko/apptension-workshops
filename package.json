@@ -1,7 +1,8 @@
 {
   "scripts": {
     "lint": "eslint .",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "open": "npx cypress open"
   },
   "devDependencies": {
     "eslint": "^8.34.0",

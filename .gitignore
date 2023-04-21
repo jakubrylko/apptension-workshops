@@ -55,3 +55,4 @@ cypress/videos
 
 # Sensitive
 .env
+cypress.env.json

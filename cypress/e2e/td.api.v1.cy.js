@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { hexColorGenerator, numberGenerator } from '../support/data-gen';
 
 describe('API Assignment', () => {
@@ -42,7 +41,7 @@ describe('API Assignment', () => {
     }).then((response) => {
       expect(response.status).to.equal(200);
 
-      const project = _.find(response.body, { id: projectId });
+      const project = Cypress._.find(response.body, { id: projectId });
       expect(project.id).to.exist.and.equal(projectId);
     });
   });
@@ -94,7 +93,7 @@ describe('API Assignment', () => {
       });
 
       response.body.forEach(($element) => idArr.push($element.id));
-      expect(_.uniq(idArr).length).to.equal(idArr.length);
+      expect(Cypress._.uniq(idArr).length).to.equal(idArr.length);
 
       response.body.forEach(($element) => nameArr.push($element.name));
       console.log(nameArr);
@@ -135,7 +134,7 @@ describe('API Assignment', () => {
     }).then((response) => {
       expect(response.status).to.equal(200);
 
-      const updatedProject = _.find(response.body, { id: projectId });
+      const updatedProject = Cypress._.find(response.body, { id: projectId });
       expect(updatedProject.id).to.exist.and.equal(projectId);
     });
   });
@@ -293,7 +292,7 @@ describe('API Assignment', () => {
       }).then((response) => {
         expect(response.status).to.equal(200);
 
-        const entry = _.find(response.body, { id: timeEntryId });
+        const entry = Cypress._.find(response.body, { id: timeEntryId });
         expect(entry.id).to.exist.and.equal(timeEntryId);
       });
     });

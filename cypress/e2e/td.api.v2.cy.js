@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { sendRequest } from '../support/send-request';
 import {
   firstProject,
@@ -28,7 +27,7 @@ describe('Teamdeck API', () => {
     sendRequest('GET', '/projects?sort=-id').then((response) => {
       expect(response.status).to.equal(200);
 
-      const project = _.find(response.body, { id: projectId });
+      const project = Cypress._.find(response.body, { id: projectId });
       expect(project.id).to.exist.and.equal(projectId);
     });
   });
@@ -68,7 +67,7 @@ describe('Teamdeck API', () => {
       });
 
       response.body.forEach(($element) => idArr.push($element.id));
-      expect(_.uniq(idArr).length).to.equal(idArr.length);
+      expect(Cypress._.uniq(idArr).length).to.equal(idArr.length);
 
       response.body.forEach(($element) => nameArr.push($element.name));
       console.log(nameArr);
@@ -90,7 +89,7 @@ describe('Teamdeck API', () => {
     sendRequest('GET', '/projects?sort=-id').then((response) => {
       expect(response.status).to.equal(200);
 
-      const updatedProject = _.find(response.body, { id: projectId });
+      const updatedProject = Cypress._.find(response.body, { id: projectId });
       expect(updatedProject.id).to.exist.and.equal(projectId);
     });
   });
@@ -159,7 +158,7 @@ describe('Teamdeck API', () => {
       sendRequest('GET', '/time-entries?sort=-id').then((response) => {
         expect(response.status).to.equal(200);
 
-        const entry = _.find(response.body, { id: timeEntryId });
+        const entry = Cypress._.find(response.body, { id: timeEntryId });
         expect(entry.id).to.exist.and.equal(timeEntryId);
       });
     });

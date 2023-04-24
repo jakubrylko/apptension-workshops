@@ -1,19 +1,19 @@
 import { logIn, BASIC_AUTH_DATA } from '../support/auth';
-import { DATE_INPUT } from '../support/calendar';
 
 const email = Cypress.env('email');
 const password = Cypress.env('password');
 const basicAuthData = BASIC_AUTH_DATA;
 
-describe('Dates', () => {
-  it(`should verify selected date`, () => {
+describe('Intercept', () => {
+  it('Should intercept request', () => {
     logIn(email, password, basicAuthData);
 
+    cy.intercept('**/autocomplete**').as('autocomplete')
     cy.visit('/organizations/93433/calendar', basicAuthData);
 
-    cy.get(DATE_INPUT).then(($input) => {
-      const date = $input.val();
-      console.log('Date', date);
-    });
+    cy.wait('@autocomplete').then(response => {
+      cy.log(response)
+      expect(response.response.body.project[0]).to.have.property('name', 'Project 1')
+    })
   });
 });

@@ -41,9 +41,9 @@ describe('Intercept Assignment', () => {
   });
 
   it('Should intercept request and return fixtures', () => {
-    cy.fixture('response-object').then((response) => {
-      cy.intercept('**/calendar?dataTypes=1,2,3,4**page=1**', response.resourceList).as('resourceList');
-      cy.intercept('**/calendar?dataTypes=7,1,2,4**page=1**', response.projectList).as('projectList');
+    cy.fixture('response-object').then((ro) => {
+      cy.intercept('**/calendar?dataTypes=1,2,3,4**page=1**', ro.resourceList).as('resourceList');
+      cy.intercept('**/calendar?dataTypes=7,1,2,4**page=1**', ro.projectList).as('projectList');
     });
 
     cy.visit('/organizations/98407/calendar', basicAuthData);

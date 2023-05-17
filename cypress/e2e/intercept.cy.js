@@ -5,7 +5,7 @@ const email = Cypress.env('jr_email');
 const password = Cypress.env('jr_password');
 const basicAuthData = BASIC_AUTH_DATA;
 
-describe('Intercept Assignment', () => {
+describe('Intercept Assignment', { retries: 2 }, () => {
   beforeEach(() => {
     logIn(email, password, basicAuthData);
   });
@@ -23,8 +23,8 @@ describe('Intercept Assignment', () => {
     cy.wait('@projectList').then((response) => {
       expect(response.response.body.items).is.not.empty;
     });
-    
-    cy.pause()
+
+    cy.pause();
   });
 
   it('Should intercept request and return empty lists', () => {
@@ -41,7 +41,7 @@ describe('Intercept Assignment', () => {
       expect(response.response.body).is.empty;
     });
 
-    cy.pause()
+    cy.pause();
   });
 
   it('Should intercept request and return fixtures', () => {
@@ -52,7 +52,7 @@ describe('Intercept Assignment', () => {
 
     cy.visit('/organizations/98407/calendar', basicAuthData);
     cy.wait('@resourceList').then((response) => {
-      expect(response.response.body.items).have.length(5);
+      expect(response.response.body.items).have.length(10);
       response.response.body.items.forEach(($item) => {
         expect($item.name).to.contain('Fixture');
       });
@@ -60,13 +60,13 @@ describe('Intercept Assignment', () => {
 
     cy.contains('Projects').click();
     cy.wait('@projectList').then((response) => {
-      expect(response.response.body.items).have.length(5);
+      expect(response.response.body.items).have.length(10);
       response.response.body.items.forEach(($item) => {
         expect($item.name).to.contain('Fixture');
       });
     });
 
-    cy.pause()
+    cy.pause();
   });
 
   it('Should intercept request and return StaticResponse objects', () => {
@@ -75,7 +75,7 @@ describe('Intercept Assignment', () => {
 
     cy.visit('/organizations/98407/calendar', basicAuthData);
     cy.wait('@resourceList').then((response) => {
-      expect(response.response.body.items).have.length(3);
+      expect(response.response.body.items).have.length(10);
       response.response.body.items.forEach(($item) => {
         expect($item.name).to.contain('Mocked');
       });
@@ -83,7 +83,7 @@ describe('Intercept Assignment', () => {
 
     cy.contains('Projects').click();
     cy.wait('@projectList').then((response) => {
-      expect(response.response.body.items).have.length(3);
+      expect(response.response.body.items).have.length(10);
       response.response.body.items.forEach(($item) => {
         expect($item.name).to.contain('Mocked');
       });

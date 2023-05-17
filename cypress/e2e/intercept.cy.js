@@ -23,6 +23,8 @@ describe('Intercept Assignment', () => {
     cy.wait('@projectList').then((response) => {
       expect(response.response.body.items).is.not.empty;
     });
+    
+    cy.pause()
   });
 
   it('Should intercept request and return empty lists', () => {
@@ -38,6 +40,8 @@ describe('Intercept Assignment', () => {
     cy.wait('@projectList').then((response) => {
       expect(response.response.body).is.empty;
     });
+
+    cy.pause()
   });
 
   it('Should intercept request and return fixtures', () => {
@@ -61,6 +65,8 @@ describe('Intercept Assignment', () => {
         expect($item.name).to.contain('Fixture');
       });
     });
+
+    cy.pause()
   });
 
   it('Should intercept request and return StaticResponse objects', () => {

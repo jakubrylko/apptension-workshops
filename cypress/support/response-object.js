@@ -2,7 +2,7 @@ export const resourceList = {
   _meta: {
     currentPage: 1,
     perPage: 10,
-    pageCount: 10,
+    pageCount: 1,
     totalCount: '10',
   },
   items: [
@@ -368,7 +368,7 @@ export const projectList = {
   _meta: {
     currentPage: 1,
     perPage: 10,
-    pageCount: 10,
+    pageCount: 1,
     totalCount: '10',
   },
   items: [

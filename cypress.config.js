@@ -18,5 +18,6 @@ module.exports = defineConfig({
     baseUrl: 'https://app.qa.saas.apptoku.com',
     specPattern: './cypress/e2e/**/*cy.js',
     downloadsFolder: './downloads',
+    watchForFileChanges: false
   },
 });

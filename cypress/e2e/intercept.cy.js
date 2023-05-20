@@ -19,12 +19,12 @@ describe('Intercept Assignment', { retries: 2 }, () => {
       expect(response.response.body.items).is.not.empty;
     });
 
-    cy.contains('Projects').click();
+    cy.get('button').contains('Projects').dblclick();
     cy.wait('@projectList').then((response) => {
       expect(response.response.body.items).is.not.empty;
     });
 
-    cy.pause();
+    // cy.pause();
   });
 
   it('Should intercept request and return empty lists', () => {
@@ -36,12 +36,12 @@ describe('Intercept Assignment', { retries: 2 }, () => {
       expect(response.response.body).is.empty;
     });
 
-    cy.contains('Projects').click();
+    cy.get('button').contains('Projects').dblclick();
     cy.wait('@projectList').then((response) => {
       expect(response.response.body).is.empty;
     });
 
-    cy.pause();
+    // cy.pause();
   });
 
   it('Should intercept request and return fixtures', () => {
@@ -58,7 +58,7 @@ describe('Intercept Assignment', { retries: 2 }, () => {
       });
     });
 
-    cy.contains('Projects').click();
+    cy.get('button').contains('Projects').dblclick();
     cy.wait('@projectList').then((response) => {
       expect(response.response.body.items).have.length(10);
       response.response.body.items.forEach(($item) => {
@@ -66,7 +66,7 @@ describe('Intercept Assignment', { retries: 2 }, () => {
       });
     });
 
-    cy.pause();
+    // cy.pause();
   });
 
   it('Should intercept request and return StaticResponse objects', () => {
@@ -81,7 +81,7 @@ describe('Intercept Assignment', { retries: 2 }, () => {
       });
     });
 
-    cy.contains('Projects').click();
+    cy.get('button').contains('Projects').dblclick();
     cy.wait('@projectList').then((response) => {
       expect(response.response.body.items).have.length(10);
       response.response.body.items.forEach(($item) => {

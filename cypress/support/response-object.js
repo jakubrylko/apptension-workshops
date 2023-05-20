@@ -2,12 +2,12 @@ export const resourceList = {
   _meta: {
     currentPage: 1,
     perPage: 10,
-    pageCount: 5,
-    totalCount: '5',
+    pageCount: 10,
+    totalCount: '10',
   },
   items: [
     {
-      id: 1867651,
+      id: 1867650,
       name: 'Mocked Employee 01',
       type: 1,
       is_part_time: 1,
@@ -16,12 +16,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867652,
+      id: 1867651,
       name: 'Mocked Employee 02',
       type: 1,
       is_part_time: 1,
@@ -30,12 +51,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867653,
+      id: 1867652,
       name: 'Mocked Employee 03',
       type: 1,
       is_part_time: 1,
@@ -44,12 +86,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867654,
+      id: 1867653,
       name: 'Mocked Employee 04',
       type: 1,
       is_part_time: 1,
@@ -58,12 +121,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867655,
+      id: 1867654,
       name: 'Mocked Employee 05',
       type: 1,
       is_part_time: 1,
@@ -72,12 +156,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867656,
+      id: 1867655,
       name: 'Mocked Employee 06',
       type: 1,
       is_part_time: 1,
@@ -86,12 +191,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867657,
+      id: 1867656,
       name: 'Mocked Employee 07',
       type: 1,
       is_part_time: 1,
@@ -100,12 +226,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867658,
+      id: 1867657,
       name: 'Mocked Employee 08',
       type: 1,
       is_part_time: 1,
@@ -114,12 +261,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867659,
+      id: 1867658,
       name: 'Mocked Employee 09',
       type: 1,
       is_part_time: 1,
@@ -128,12 +296,33 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
-      id: 1867660,
+      id: 1867659,
       name: 'Mocked Employee 10',
       type: 1,
       is_part_time: 1,
@@ -142,9 +331,30 @@ export const resourceList = {
       contract_start_date: '2023-04-20',
       contract_end_date: '2030-08-20',
       organization_unit_id: 181241,
+      linked_invitation: null,
       custom_fields: [],
+      avatar: null,
+      role: null,
+      email: null,
       timeZone: 'Europe/Sarajevo',
-      subrows: [],
+      subrows: [
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 3,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
   ],
   highlighted_items: {
@@ -158,8 +368,8 @@ export const projectList = {
   _meta: {
     currentPage: 1,
     perPage: 10,
-    pageCount: 1,
-    totalCount: '5',
+    pageCount: 10,
+    totalCount: '10',
   },
   items: [
     {
@@ -169,7 +379,24 @@ export const projectList = {
       color: '#3e97ab',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862889,
@@ -178,7 +405,24 @@ export const projectList = {
       color: '#b109ca',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862890,
@@ -187,7 +431,24 @@ export const projectList = {
       color: '#b1d6d5',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862891,
@@ -196,7 +457,24 @@ export const projectList = {
       color: '#04e8ed',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862892,
@@ -205,7 +483,24 @@ export const projectList = {
       color: '#c4d6a8',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862893,
@@ -214,7 +509,24 @@ export const projectList = {
       color: '#ff79f2',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862894,
@@ -223,7 +535,24 @@ export const projectList = {
       color: '#81dac6',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862895,
@@ -232,7 +561,24 @@ export const projectList = {
       color: '#b1d6d5',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862896,
@@ -241,7 +587,24 @@ export const projectList = {
       color: '#a7a105',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
     {
       id: 862897,
@@ -250,7 +613,24 @@ export const projectList = {
       color: '#5e38ae',
       custom_fields: [],
       tags: [],
-      subrows: [],
+      subrows: [
+        {
+          type: 7,
+          blocks: [],
+        },
+        {
+          type: 1,
+          blocks: [],
+        },
+        {
+          type: 2,
+          blocks: [],
+        },
+        {
+          type: 4,
+          blocks: [],
+        },
+      ],
     },
   ],
   highlighted_items: {

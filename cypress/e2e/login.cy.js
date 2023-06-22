@@ -32,10 +32,10 @@ describe('Login page', () => {
       expect(response.status).eql(200);
       const token = response.body.data.tokenAuth.access;
       cy.writeFile('cypress/fixtures/token.json', { token });
-
-      cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
-      cy.contains('Welcome!').should('be.visible');
     });
+
+    cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    cy.contains('Welcome!').should('be.visible');
   });
 
   it('Should login with token', () => {

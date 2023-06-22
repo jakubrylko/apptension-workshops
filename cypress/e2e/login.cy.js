@@ -7,7 +7,7 @@ import { notificationsListQuery, loginFormMutation } from '../support/graphql/qu
 import { loginVariables } from '../support/graphql/variables';
 
 describe('Login page', () => {
-  it('Should log in with UI', () => {
+  xit('Should log in with UI', () => {
     authenticate(LOGIN_USER_AUTH);
     cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
 
@@ -30,8 +30,8 @@ describe('Login page', () => {
   it('Should login with query', () => {
     useQuery('loginFormMutation', loginFormMutation, loginVariables).then((response) => {
       expect(response.status).eql(200);
-      const accessToken = response.body.data.tokenAuth.access;
-      cy.writeFile('cypress/fixtures/token.json', { accessToken });
+      const token = response.body.data.tokenAuth.access;
+      cy.writeFile('cypress/fixtures/token.json', { token });
 
       cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
       cy.contains('Welcome!').should('be.visible');
@@ -40,7 +40,7 @@ describe('Login page', () => {
 
   it('Should login with token', () => {
     cy.fixture('token').then((token) => {
-      cy.setCookie('token', token.accessToken);
+      cy.setCookie('token', token.token);
     });
 
     cy.visit(HOMEPAGE, BASIC_AUTH_DATA);

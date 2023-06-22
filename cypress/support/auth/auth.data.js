@@ -1,6 +1,6 @@
 export const LOGIN_USER_AUTH = {
-  email: Cypress.env('email'),
-  password: Cypress.env('password'),
+  email: Cypress.env('jr_email'),
+  password: Cypress.env('jr_password'),
   sessionID: 'LOGIN_USER',
 };
 

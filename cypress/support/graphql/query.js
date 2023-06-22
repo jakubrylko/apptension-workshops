@@ -49,48 +49,61 @@ export const loginFormMutation = print(gql`
 `);
 
 export const itemDeleteMutation = print(gql`
-mutation crudDemoItemListItemDeleteMutation($input: DeleteCrudDemoItemMutationInput!) {
-  deleteCrudDemoItem(input: $input) {
-    deletedIds
-    __typename
+  mutation crudDemoItemListItemDeleteMutation($input: DeleteCrudDemoItemMutationInput!) {
+    deleteCrudDemoItem(input: $input) {
+      deletedIds
+      __typename
+    }
   }
-}
 `);
 
 export const addItemMutation = print(gql`
-mutation addCrudDemoItemMutation($input: CreateCrudDemoItemMutationInput!) {
-  createCrudDemoItem(input: $input) {
-    crudDemoItemEdge {
-      node {
+  mutation addCrudDemoItemMutation($input: CreateCrudDemoItemMutationInput!) {
+    createCrudDemoItem(input: $input) {
+      crudDemoItemEdge {
+        node {
+          id
+          name
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+  }
+`);
+
+export const itemListQuery = print(gql`
+  query crudDemoItemListQuery {
+    allCrudDemoItems(first: 100) {
+      edges {
+        node {
+          id
+          ...crudDemoItemListItem
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+  }
+
+  fragment crudDemoItemListItem on CrudDemoItemType {
+    id
+    name
+    __typename
+  }
+`);
+
+export const itemEditMutation = print(gql`
+  mutation editCrudDemoItemContentMutation($input: UpdateCrudDemoItemMutationInput!) {
+    updateCrudDemoItem(input: $input) {
+      crudDemoItem {
         id
         name
         __typename
       }
       __typename
     }
-    __typename
   }
-}
-`);
-
-export const itemListQuery = print(gql`
-query crudDemoItemListQuery {
-  allCrudDemoItems(first: 100) {
-    edges {
-      node {
-        id
-        ...crudDemoItemListItem
-        __typename
-      }
-      __typename
-    }
-    __typename
-  }
-}
-
-fragment crudDemoItemListItem on CrudDemoItemType {
-  id
-  name
-  __typename
-}
 `);

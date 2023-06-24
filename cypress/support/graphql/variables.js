@@ -4,3 +4,9 @@ export const loginVariables = {
     password: Cypress.env('jr_password'),
   },
 };
+
+export const randomNameGen = (number = 100, name = 'JR Test') => {
+  const randomNumber = Math.round(Math.random() * number)
+  const randomName = `${name} ${randomNumber}`
+  return randomName
+}

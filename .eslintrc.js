@@ -12,5 +12,6 @@ module.exports = {
   rules: {
     'import/prefer-default-export': 'off',
     'no-shadow': 'off',
+    'no-unused-expressions': 'off'
   },
 };

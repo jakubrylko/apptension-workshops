@@ -3,7 +3,6 @@ import { useQuery } from '../support/graphql/use.query';
 import { loginVariables, randomNameGen } from '../support/graphql/variables';
 
 import { BASIC_AUTH_DATA } from '../support/auth/auth.data';
-import { CRUD_ITEMS } from '../support/home/home.selectors';
 
 describe('GraphQL - Homework', () => {
   it('Task 1', () => {
@@ -35,7 +34,7 @@ describe('GraphQL - Homework', () => {
     });
 
     cy.visit('/', BASIC_AUTH_DATA);
-    cy.contains(CRUD_ITEMS).click();
+    cy.contains('CRUD').click();
     cy.contains(randomName).should('be.visible');
   });
 
@@ -61,7 +60,7 @@ describe('GraphQL - Homework', () => {
       const newItemId = response.body.data.createCrudDemoItem.crudDemoItemEdge.node.id;
 
       cy.visit('/', BASIC_AUTH_DATA);
-      cy.contains(CRUD_ITEMS).click();
+      cy.contains('CRUD').click();
       cy.contains(randomName).should('be.visible');
 
       const updatedItem = {

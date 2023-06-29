@@ -11,6 +11,7 @@ describe('Login page', () => {
   xit('Should login with UI', () => {
     authenticate(LOGIN_USER_AUTH);
     cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    cy.contains(WELCOME_PHRASE).should('be.visible');
 
     cy.api({
       method: 'POST',

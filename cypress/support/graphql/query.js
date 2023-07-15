@@ -107,3 +107,20 @@ export const itemEditMutation = print(gql`
     }
   }
 `);
+
+export const notificationMutation = print(gql`
+mutation notificationMutation($input: UpdateNotificationMutationInput!) {
+  updateNotification(input: $input) {
+    hasUnreadNotifications
+    notificationEdge {
+      node {
+        id
+        readAt
+        __typename
+      }
+      __typename
+    }
+    __typename
+  }
+}
+`);

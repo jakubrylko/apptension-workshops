@@ -1,3 +1,5 @@
+import { setNotificationDate } from './variables';
+
 export const crudItemList = {
   data: {
     allCrudDemoItems: {
@@ -26,6 +28,22 @@ export const crudItemList = {
           },
           __typename: 'CrudDemoItemEdge',
         },
+        {
+          node: {
+            id: '04',
+            name: 'Mock 04',
+            __typename: 'CrudDemoItemType',
+          },
+          __typename: 'CrudDemoItemEdge',
+        },
+        {
+          node: {
+            id: '05',
+            name: 'Mock 05',
+            __typename: 'CrudDemoItemType',
+          },
+          __typename: 'CrudDemoItemEdge',
+        },
       ],
       __typename: 'CrudDemoItemConnection',
     },
@@ -46,7 +64,7 @@ export const notificationsList = {
               user: 'jrylko+qaw@apptension.com',
               avatar: null,
             },
-            createdAt: '2023-06-25T10:00:00.000',
+            createdAt: setNotificationDate({ days: 0 }),
             readAt: null,
             type: 'CRUD_ITEM_CREATED',
             __typename: 'NotificationType',
@@ -62,7 +80,7 @@ export const notificationsList = {
               user: 'jrylko+qaw@apptension.com',
               avatar: null,
             },
-            createdAt: '2023-06-25T10:00:00.000',
+            createdAt: setNotificationDate({ days: -2 }),
             readAt: null,
             type: 'CRUD_ITEM_CREATED',
             __typename: 'NotificationType',
@@ -78,7 +96,7 @@ export const notificationsList = {
               user: 'jrylko+qaw@apptension.com',
               avatar: null,
             },
-            createdAt: '2023-06-25T10:00:00.000',
+            createdAt: setNotificationDate({ days: -4 }),
             readAt: null,
             type: 'CRUD_ITEM_CREATED',
             __typename: 'NotificationType',
@@ -94,7 +112,7 @@ export const notificationsList = {
               user: 'jrylko+qaw@apptension.com',
               avatar: null,
             },
-            createdAt: '2023-06-25T10:00:00.000',
+            createdAt: setNotificationDate({ days: 2 }),
             readAt: null,
             type: 'CRUD_ITEM_CREATED',
             __typename: 'NotificationType',
@@ -110,7 +128,7 @@ export const notificationsList = {
               user: 'jrylko+qaw@apptension.com',
               avatar: null,
             },
-            createdAt: '2023-06-25T10:00:00.000',
+            createdAt: setNotificationDate({ days: 4 }),
             readAt: null,
             type: 'CRUD_ITEM_CREATED',
             __typename: 'NotificationType',

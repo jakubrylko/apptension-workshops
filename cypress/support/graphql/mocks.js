@@ -1,4 +1,4 @@
-import { setNotificationDate } from './variables';
+import { setNotificationDate } from './data.gen';
 
 export const crudItemList = {
   data: {

@@ -12,12 +12,15 @@ module.exports = defineConfig({
     configFile: 'reporter-config.json',
   },
   videoUploadOnPasses: false,
+  defaultCommandTimeout: 10000,
   pageLoadTimeout: 10000,
   taskTimeout: 20000,
   e2e: {
     baseUrl: 'https://app.qa.saas.apptoku.com',
     specPattern: './cypress/e2e/**/*cy.js',
     downloadsFolder: './downloads',
-    watchForFileChanges: false
+    watchForFileChanges: false,
+    hideXHRInCommandLog: true,
+    chromeWebSecurity: false,
   },
 });

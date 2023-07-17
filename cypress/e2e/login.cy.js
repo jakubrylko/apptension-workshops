@@ -1,8 +1,7 @@
 import { BASIC_AUTH_DATA, LOGIN_USER_AUTH } from '../support/auth/auth.data';
-import { HOMEPAGE } from '../support/navigation';
+import { HOMEPAGE } from '../support/login/navigation';
 import { WELCOME_PHRASE } from '../support/home/home.selectors';
 import { authenticate } from '../support/auth/auth';
-
 import { API_PATH, BASIC_AUTH, useQuery } from '../support/graphql/use.query';
 import { notificationsListQuery, loginFormMutation } from '../support/graphql/query';
 import { loginVariables } from '../support/graphql/variables';

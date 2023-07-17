@@ -1,7 +1,7 @@
 import * as query from '../support/graphql/query';
 import { useQuery } from '../support/graphql/use.query';
-import { loginVariables, randomNameGen } from '../support/graphql/variables';
-
+import { loginVariables } from '../support/graphql/variables';
+import { randomNameGen } from '../support/graphql/data.gen';
 import { BASIC_AUTH_DATA } from '../support/auth/auth.data';
 
 describe('GraphQL - Homework', () => {

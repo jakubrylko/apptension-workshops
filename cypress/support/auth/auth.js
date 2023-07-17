@@ -2,7 +2,7 @@
 
 import { EMAIL_INPUT, LOG_IN_BTN, PASSWORD_INPUT } from '../login/login.selectors';
 import { BASIC_AUTH_DATA } from './auth.data';
-import { NAVIGATION } from '../navigation';
+import { NAVIGATION } from '../login/navigation';
 import { shouldShowWelcomeLabel } from '../home/home.assertion';
 
 const { HOMEPAGE, LOGIN_PAGE } = NAVIGATION;

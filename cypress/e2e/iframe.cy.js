@@ -1,7 +1,7 @@
 import { authenticate } from '../support/auth/auth';
 import { BASIC_AUTH_DATA, LOGIN_USER_AUTH } from '../support/auth/auth.data';
 import { HOMEPAGE } from '../support/login/navigation';
-import { fillStripeField } from '../support/iframe/iframe';
+import { PAYMENT_TOAST, fillStripeField } from '../support/iframe/iframe';
 
 describe('iFrame task', () => {
   const NAME = 'JR Test';
@@ -23,8 +23,8 @@ describe('iFrame task', () => {
     // cy.pause()
 
     cy.contains('Pay 5 USD').click();
-    cy.get('[data-testid="toast-1"]').should('exist');
-    cy.get('[data-testid="toast-1"]').should('not.exist');
+    cy.get(PAYMENT_TOAST).should('exist');
+    cy.get(PAYMENT_TOAST).should('not.exist');
 
     cy.contains('Payments').click();
     cy.contains(NAME).should('be.visible');

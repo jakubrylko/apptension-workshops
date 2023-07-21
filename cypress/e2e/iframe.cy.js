@@ -1,6 +1,7 @@
-import { authenticate } from '../support/auth/auth';
-import { BASIC_AUTH_DATA, LOGIN_USER_AUTH } from '../support/auth/auth.data';
-import { HOMEPAGE } from '../support/login/navigation';
+import { useQuery } from '../support/graphql/use.query';
+import { loginFormMutation } from '../support/graphql/query';
+import { loginVariables } from '../support/graphql/variables';
+import { BASIC_AUTH_DATA } from '../support/auth/auth.data';
 import { PAYMENT_TOAST, fillStripeField } from '../support/iframe/iframe';
 
 describe('iFrame task', () => {
@@ -10,8 +11,8 @@ describe('iFrame task', () => {
   const CVC = '123';
 
   it('Should fill card details on iframe', () => {
-    authenticate(LOGIN_USER_AUTH);
-    cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    useQuery('loginFormMutation', loginFormMutation, loginVariables);
+    cy.visit('/', BASIC_AUTH_DATA);
 
     cy.contains('Payments').click();
     cy.contains('$5').click();

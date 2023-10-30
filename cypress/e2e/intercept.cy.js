@@ -49,8 +49,9 @@ describe('GraphQL - Intercept', () => {
         const { edges } = notificationsList.data.allNotifications;
         edges.forEach(($edge) => {
           // eslint-disable-next-line no-param-reassign
-          $edge.node.readAt = setNotificationDate({ days: 0 });
+          $edge.node.readAt = setNotificationDate();
         });
+        notificationsList.data.hasUnreadNotifications = false;
       });
     cy.pause();
 

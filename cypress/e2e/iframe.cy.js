@@ -10,7 +10,7 @@ describe('iFrame task', () => {
   const YEAR = '1030';
   const CVC = '123';
 
-  it('Should fill card details on iframe', () => {
+  it('Should fill card details in iframe', () => {
     useQuery('loginFormMutation', loginFormMutation, loginVariables);
     cy.visit('/', BASIC_AUTH_DATA);
 
@@ -24,7 +24,7 @@ describe('iFrame task', () => {
     // cy.pause()
 
     cy.contains('Pay 5 USD').click();
-    cy.get(PAYMENT_TOAST).should('exist');
+    cy.get(PAYMENT_TOAST).should('be.visible');
     cy.get(PAYMENT_TOAST).should('not.exist');
 
     cy.contains('Payments').click();

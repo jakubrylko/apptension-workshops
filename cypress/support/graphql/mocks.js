@@ -64,7 +64,7 @@ export const notificationsList = {
               user: 'jrylko+qaw@apptension.com',
               avatar: null,
             },
-            createdAt: setNotificationDate({ days: 0 }),
+            createdAt: setNotificationDate(),
             readAt: null,
             type: 'CRUD_ITEM_CREATED',
             __typename: 'NotificationType',

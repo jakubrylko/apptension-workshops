@@ -4,8 +4,8 @@ export const randomNameGen = (number = 100, name = 'JR Test') => {
   return randomName;
 };
 
-export const setNotificationDate = ({ days }) => {
+export const setNotificationDate = ({ days = 0 } = {}) => {
   const notificationDate = new Date(new Date().setDate(new Date().getDate() + days));
-  const formattedDate = notificationDate.toISOString()
+  const formattedDate = notificationDate.toISOString();
   return formattedDate;
 };

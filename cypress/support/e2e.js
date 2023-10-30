@@ -1,4 +1,8 @@
 import './commands';
+<<<<<<< HEAD
+=======
+import 'cypress-plugin-api';
+>>>>>>> e2e/add-api-tests-for-teamdeck
 
 if (Cypress.config('hideXHRInCommandLog')) {
   const app = window.top;
@@ -9,3 +13,8 @@ if (Cypress.config('hideXHRInCommandLog')) {
     app.document.head.appendChild(style);
   }
 }
+<<<<<<< HEAD
+=======
+
+// Cypress.on('uncaught:exception', (err, runnable) => false);
+>>>>>>> e2e/add-api-tests-for-teamdeck

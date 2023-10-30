@@ -13,6 +13,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-console': 'off',
     'no-unused-expressions': 'off',
-    // 'no-shadow': 'off',
+    'no-shadow': 'off',
   },
 };

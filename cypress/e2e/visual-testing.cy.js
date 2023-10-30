@@ -2,7 +2,9 @@ import { closeCookieModal } from '../support/apptension/cookies';
 
 describe('Visual testing', () => {
   it('Job categories should be in the viewport', () => {
-    cy.visit('https://www.apptension.com');
+    Cypress.on('uncaught:exception', () => false)
+
+    cy.visit(Cypress.env('appten_url'));
     closeCookieModal();
 
     cy.contains('Careers').click();

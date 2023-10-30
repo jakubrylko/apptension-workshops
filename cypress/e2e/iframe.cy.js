@@ -4,6 +4,8 @@ import { loginVariables } from '../support/graphql/variables';
 import { BASIC_AUTH_DATA } from '../support/auth/auth.data';
 import { PAYMENT_TOAST, fillStripeField } from '../support/iframe/iframe';
 
+const baseUrl = Cypress.env('saas_url') 
+
 describe('iFrame task', () => {
   const NAME = 'JR Test';
   const CARD_NUMBER = '4242424242424242';
@@ -12,7 +14,7 @@ describe('iFrame task', () => {
 
   it('Should fill card details in iframe', () => {
     useQuery('loginFormMutation', loginFormMutation, loginVariables);
-    cy.visit('/', BASIC_AUTH_DATA);
+    cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
 
     cy.contains('Payments').click();
     cy.contains('$5').click();

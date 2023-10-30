@@ -1,15 +1,17 @@
 import { BASIC_AUTH_DATA, LOGIN_USER_AUTH } from '../support/auth/auth.data';
-import { HOMEPAGE } from '../support/login/navigation';
 import { WELCOME_PHRASE } from '../support/home/home.selectors';
 import { authenticate } from '../support/auth/auth';
-import { API_PATH, BASIC_AUTH, useQuery } from '../support/graphql/use.query';
+import { useQuery } from '../support/graphql/use.query';
 import { notificationsListQuery, loginFormMutation } from '../support/graphql/query';
 import { loginVariables } from '../support/graphql/variables';
+
+const baseUrl = Cypress.env('saas_url');
+const API_PATH = Cypress.env('saas_api');
 
 describe('Login page', () => {
   xit('Should login with UI', () => {
     authenticate(LOGIN_USER_AUTH);
-    cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
     cy.contains(WELCOME_PHRASE).should('be.visible');
 
     cy.api({
@@ -19,9 +21,6 @@ describe('Login page', () => {
         operationName: 'notificationsListQuery',
         query: notificationsListQuery,
         variables: { count: 20 },
-      },
-      headers: {
-        authorization: BASIC_AUTH,
       },
     }).then((response) => {
       expect(response.status).eql(200);
@@ -35,7 +34,7 @@ describe('Login page', () => {
       cy.writeFile('cypress/fixtures/token.json', { token, refreshToken });
     });
 
-    cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
     cy.contains(WELCOME_PHRASE).should('be.visible');
   });
 
@@ -45,7 +44,7 @@ describe('Login page', () => {
       cy.setCookie('refresh_token', token.refreshToken);
     });
 
-    cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
     cy.contains(WELCOME_PHRASE).should('be.visible');
   });
 });

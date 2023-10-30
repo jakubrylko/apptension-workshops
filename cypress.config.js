@@ -2,8 +2,7 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) { },
-    baseUrl: 'https://stage.app.teamdeck.io/',
+    setupNodeEvents(on, config) {},
     specPattern: './cypress/e2e/**/*cy.js',
     downloadsFolder: './downloads',
     viewportWidth: 1920,
@@ -11,7 +10,7 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 10000,
     taskTimeout: 20000,
-    watchForFileChanges: true,
+    watchForFileChanges: false,
     hideXHRInCommandLog: true,
     chromeWebSecurity: false,
     videoUploadOnPasses: false,
@@ -21,9 +20,11 @@ module.exports = defineConfig({
       configFile: 'reporter-config.json',
     },
     env: {
-      saasUrl: 'https://app.qa.saas.apptoku.com',
-      domain: 'app.qa.saas.apptoku.com',
-      apiPath: '/api/graphql/',
+      appten_url: 'https://www.apptension.com',
+      teamdeck_url: 'https://stage.app.teamdeck.io',
+      teamdeck_api: 'https://stage.api.teamdeck.io/v1',
+      saas_url: 'https://app.qa.saas.apptoku.com',
+      saas_api: 'https://app.qa.saas.apptoku.com/api/graphql/'
     },
-  }
+  },
 });

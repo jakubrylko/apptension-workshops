@@ -7,7 +7,7 @@ describe('Apptension careers', () => {
   Cypress.on('uncaught:exception', () => false);
 
   it('Should return and assert tech stack count', () => {
-    cy.visit('https://www.apptension.com');
+    cy.visit(Cypress.env('appten_url'));
     closeCookieModal();
 
     cy.contains('Careers').click();

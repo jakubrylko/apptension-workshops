@@ -6,7 +6,7 @@ export const LOGIN_USER_AUTH = {
 
 export const BASIC_AUTH_DATA = {
   auth: {
-    username: Cypress.env('BASIC_AUTH_LOGIN'),
-    password: Cypress.env('BASIC_AUTH_PASSWORD'),
+    username: Cypress.env('saas_basic_auth_user'),
+    password: Cypress.env('saas_basic_auth_password'),
   },
 };

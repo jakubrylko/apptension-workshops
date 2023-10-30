@@ -1,9 +1,10 @@
 import { crudItemList, notificationsList } from '../support/graphql/mocks';
 import { aliasQuery } from '../support/graphql/utils';
 import { BASIC_AUTH_DATA, LOGIN_USER_AUTH } from '../support/auth/auth.data';
-import { HOMEPAGE } from '../support/login/navigation';
 import { authenticate } from '../support/auth/auth';
 import { setNotificationDate } from '../support/graphql/data.gen';
+
+const baseUrl = Cypress.env('saas_url');
 
 describe('GraphQL - Intercept', () => {
   xit('Should intercept CRUD item list', () => {
@@ -15,7 +16,7 @@ describe('GraphQL - Intercept', () => {
     });
 
     authenticate(LOGIN_USER_AUTH);
-    cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
     cy.contains('CRUD').click();
 
     const itemsNumber = crudItemList.data.allCrudDemoItems.edges.length;
@@ -33,7 +34,7 @@ describe('GraphQL - Intercept', () => {
     });
 
     authenticate(LOGIN_USER_AUTH);
-    cy.visit(HOMEPAGE, BASIC_AUTH_DATA);
+    cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
 
     cy.get('[data-testid="notifications-trigger-testid"]').as('notificationBell');
     cy.get('@notificationBell').click();

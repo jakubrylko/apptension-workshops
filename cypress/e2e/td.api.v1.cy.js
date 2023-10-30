@@ -12,7 +12,7 @@ describe('API Assignment', () => {
     // Add new project
     cy.api({
       method: 'POST',
-      url: `${Cypress.env('td_api_url')}/projects`,
+      url: `${Cypress.env('teamdeck_api')}/projects`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -34,7 +34,7 @@ describe('API Assignment', () => {
     // Get list of projects
     cy.api({
       method: 'GET',
-      url: `${Cypress.env('td_api_url')}/projects?sort=-id`,
+      url: `${Cypress.env('teamdeck_api')}/projects?sort=-id`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -50,7 +50,7 @@ describe('API Assignment', () => {
     // Get single project
     cy.api({
       method: 'GET',
-      url: `${Cypress.env('td_api_url')}/projects/${projectId}`,
+      url: `${Cypress.env('teamdeck_api')}/projects/${projectId}`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -71,7 +71,7 @@ describe('API Assignment', () => {
     // Get list of projects
     cy.api({
       method: 'GET',
-      url: `${Cypress.env('td_api_url')}/projects?sort=-id`,
+      url: `${Cypress.env('teamdeck_api')}/projects?sort=-id`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -106,7 +106,7 @@ describe('API Assignment', () => {
     // Update project
     cy.api({
       method: 'PUT',
-      url: `${Cypress.env('td_api_url')}/projects/${projectId}`,
+      url: `${Cypress.env('teamdeck_api')}/projects/${projectId}`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -127,7 +127,7 @@ describe('API Assignment', () => {
     // Get projects list
     cy.api({
       method: 'GET',
-      url: `${Cypress.env('td_api_url')}/projects?sort=-id`,
+      url: `${Cypress.env('teamdeck_api')}/projects?sort=-id`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -151,7 +151,7 @@ describe('API Assignment', () => {
     // Add new project
     cy.api({
       method: 'POST',
-      url: `${Cypress.env('td_api_url')}/projects`,
+      url: `${Cypress.env('teamdeck_api')}/projects`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -168,7 +168,7 @@ describe('API Assignment', () => {
     // Get units in organization
     cy.api({
       method: 'GET',
-      url: `${Cypress.env('td_api_url')}/organization-units`,
+      url: `${Cypress.env('teamdeck_api')}/organization-units`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -183,7 +183,7 @@ describe('API Assignment', () => {
     // Add new basic resource
     cy.api({
       method: 'POST',
-      url: `${Cypress.env('td_api_url')}/resources`,
+      url: `${Cypress.env('teamdeck_api')}/resources`,
       headers: {
         'X-Api-Key': Cypress.env('td_api_key'),
       },
@@ -205,7 +205,7 @@ describe('API Assignment', () => {
       // Activate new resource
       cy.api({
         method: 'PUT',
-        url: `${Cypress.env('td_api_url')}/resources/${resourceId}/activate`,
+        url: `${Cypress.env('teamdeck_api')}/resources/${resourceId}/activate`,
         headers: {
           'X-Api-Key': Cypress.env('td_api_key'),
         },
@@ -217,7 +217,7 @@ describe('API Assignment', () => {
       // Get resources in organization
       cy.api({
         method: 'GET',
-        url: `${Cypress.env('td_api_url')}/resources`,
+        url: `${Cypress.env('teamdeck_api')}/resources`,
         headers: {
           'X-Api-Key': Cypress.env('td_api_key'),
         },
@@ -232,7 +232,7 @@ describe('API Assignment', () => {
       // Add booking for resource
       cy.api({
         method: 'POST',
-        url: `${Cypress.env('td_api_url')}/bookings`,
+        url: `${Cypress.env('teamdeck_api')}/bookings`,
         headers: {
           'X-Api-Key': Cypress.env('td_api_key'),
         },
@@ -257,7 +257,7 @@ describe('API Assignment', () => {
       // Add time entry for resource
       cy.api({
         method: 'POST',
-        url: `${Cypress.env('td_api_url')}/time-entries`,
+        url: `${Cypress.env('teamdeck_api')}/time-entries`,
         headers: {
           'X-Api-Key': Cypress.env('td_api_key'),
         },
@@ -285,7 +285,7 @@ describe('API Assignment', () => {
       // Get time entries in organization
       cy.api({
         method: 'GET',
-        url: `${Cypress.env('td_api_url')}/time-entries?sort=-id`,
+        url: `${Cypress.env('teamdeck_api')}/time-entries?sort=-id`,
         headers: {
           'X-Api-Key': Cypress.env('td_api_key'),
         },

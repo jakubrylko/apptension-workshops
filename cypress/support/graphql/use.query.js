@@ -1,5 +1,4 @@
-export const API_PATH = Cypress.env('apiPath');
-export const BASIC_AUTH = Cypress.env('BASIC_AUTH_HEADER');
+export const API_PATH = Cypress.env('saas_api');
 
 export const useQuery = (operationName, query, variables = null) =>
   cy.api({

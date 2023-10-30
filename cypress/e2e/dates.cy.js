@@ -1,14 +1,15 @@
 import { logIn, BASIC_AUTH_DATA } from '../support/auth';
 import { ariaLabelSelector, assertInputDate, selectTimestamp, DATE_INPUT } from '../support/calendar';
 
-const email = Cypress.env('email');
-const password = Cypress.env('password');
+const email = Cypress.env('ab_email');
+const password = Cypress.env('ab_password');
+const baseUrl = Cypress.env('teamdeck_url') 
 const basicAuthData = BASIC_AUTH_DATA;
 
 describe('Dates', () => {
   beforeEach(() => {
     logIn(email, password, basicAuthData);
-    cy.visit('/organizations/93433/calendar', basicAuthData);
+    cy.visit(`${baseUrl}/organizations/93433/calendar`, basicAuthData);
   });
 
   it('Should verify selected date with timestamp', () => {

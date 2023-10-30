@@ -4,6 +4,8 @@ import { loginVariables } from '../support/graphql/variables';
 import { randomNameGen } from '../support/graphql/data.gen';
 import { BASIC_AUTH_DATA } from '../support/auth/auth.data';
 
+const baseUrl = Cypress.env('saas_url') 
+
 describe('GraphQL - Homework', () => {
   it('Task 1', () => {
     const randomName = randomNameGen();
@@ -33,7 +35,7 @@ describe('GraphQL - Homework', () => {
       });
     });
 
-    cy.visit('/', BASIC_AUTH_DATA);
+    cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
     cy.contains('CRUD').click();
     cy.contains(randomName).should('be.visible');
   });
@@ -59,7 +61,7 @@ describe('GraphQL - Homework', () => {
     useQuery('addCrudDemoItemMutation', query.addItemMutation, newItemName).then((response) => {
       const newItemId = response.body.data.createCrudDemoItem.crudDemoItemEdge.node.id;
 
-      cy.visit('/', BASIC_AUTH_DATA);
+      cy.visit(`${baseUrl}`, BASIC_AUTH_DATA);
       cy.contains('CRUD').click();
       cy.contains(randomName).should('be.visible');
 

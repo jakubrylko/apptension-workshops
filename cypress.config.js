@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {},
+    setupNodeEvents() {},
     specPattern: './cypress/e2e/**/*cy.js',
     downloadsFolder: './downloads',
     viewportWidth: 1920,
@@ -20,7 +20,7 @@ module.exports = defineConfig({
       configFile: 'reporter-config.json',
     },
     env: {
-      appten_url: 'https://www.apptension.com',
+      apptension_url: 'https://www.apptension.com',
       teamdeck_url: 'https://stage.app.teamdeck.io',
       teamdeck_api: 'https://stage.api.teamdeck.io/v1',
       saas_url: 'https://app.qa.saas.apptoku.com',

@@ -1,5 +1,5 @@
-import 'cypress-plugin-api';
 import './commands';
+import 'cypress-plugin-api';
 
 if (Cypress.config('hideXHRInCommandLog')) {
   const app = window.top;

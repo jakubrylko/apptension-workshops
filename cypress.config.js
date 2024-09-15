@@ -19,12 +19,5 @@ module.exports = defineConfig({
     reporterOptions: {
       configFile: 'reporter-config.json',
     },
-    env: {
-      apptension_url: 'https://www.apptension.com',
-      teamdeck_url: 'https://stage.app.teamdeck.io',
-      teamdeck_api: 'https://stage.api.teamdeck.io/v1',
-      saas_url: 'https://app.qa.saas.apptoku.com',
-      saas_api: 'https://app.qa.saas.apptoku.com/api/graphql/'
-    },
   },
 });
